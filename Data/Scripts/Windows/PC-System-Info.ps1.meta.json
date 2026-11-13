@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000005",
+  "Name": "Характеристики компьютера",
+  "Description": "Собирает сведения о процессоре, памяти, Windows, модели и серийном номере.",
+  "Category": "Windows",
+  "Status": "Ready",
+  "Notes": "Только чтение. Локальный запуск через CIM; для удалённого компьютера нужны доступ по WinRM и соответствующие права. Серийный номер попадёт в отчёт.",
+  "Tags": [
+    "windows",
+    "inventory",
+    "computer",
+    "компьютер"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Характеристики компьютера",
+      "Description": "Собирает сведения о процессоре, памяти, Windows, модели и серийном номере.",
+      "Notes": "Только чтение. Локальный запуск через CIM; для удалённого компьютера нужны доступ по WinRM и соответствующие права. Серийный номер попадёт в отчёт."
+    },
+    "en": {
+      "Name": "Computer specifications",
+      "Description": "Collects CPU, memory, Windows, model and serial number details.",
+      "Notes": "Read only. Uses local CIM; remote computers require WinRM access and permissions. The report includes the serial number."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

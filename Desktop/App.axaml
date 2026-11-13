@@ -1,0 +1,261 @@
+<Application xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:icons="using:Lucide.Avalonia" x:Class="SC.ScriptForge.App" RequestedThemeVariant="Light">
+ <Application.Resources>
+  <ResourceDictionary>
+   <!-- Separate type families are intentional: display, interface, and code. -->
+   <FontFamily x:Key="ScInterfaceFont">avares://SC.ScriptForge/Assets/Fonts/Onest#Onest, Segoe UI</FontFamily>
+   <FontFamily x:Key="ScHeadingFont">avares://SC.ScriptForge/Assets/Fonts/Manrope#Manrope, Segoe UI</FontFamily>
+   <FontFamily x:Key="ScCodeFont">avares://SC.ScriptForge/Assets/Fonts/JetBrainsMono#JetBrains Mono, Consolas</FontFamily>
+   <ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Dark">
+     <SolidColorBrush x:Key="ScDanger">#F49CA7</SolidColorBrush><SolidColorBrush x:Key="ScDangerSoft">#351E27</SolidColorBrush><SolidColorBrush x:Key="ScDangerLine">#5C2A36</SolidColorBrush><SolidColorBrush x:Key="ScDangerMark">#55ED6A80</SolidColorBrush>
+     <SolidColorBrush x:Key="ScWarning">#F2C46D</SolidColorBrush><SolidColorBrush x:Key="ScWarningSoft">#352B16</SolidColorBrush><SolidColorBrush x:Key="ScWarningLine">#5A4620</SolidColorBrush><SolidColorBrush x:Key="ScSuccessLine">#22553B</SolidColorBrush><SolidColorBrush x:Key="ScLinkLine">#26406B</SolidColorBrush>
+     <SolidColorBrush x:Key="ScBackground">#0B0C10</SolidColorBrush>
+     <SolidColorBrush x:Key="ScBackdrop">#0B0C10</SolidColorBrush><SolidColorBrush x:Key="ScSidebar">#101317</SolidColorBrush>
+     <SolidColorBrush x:Key="ScSurface">#14171B</SolidColorBrush>
+     <LinearGradientBrush x:Key="ScHero" StartPoint="0%,0%" EndPoint="100%,100%"><GradientStop Color="#14171B" Offset="0"/><GradientStop Color="#172B2B" Offset="1"/></LinearGradientBrush>
+     <SolidColorBrush x:Key="ScRaised">#1B2026</SolidColorBrush><SolidColorBrush x:Key="ScHover">#242B33</SolidColorBrush>
+     <SolidColorBrush x:Key="ScBorder">#303840</SolidColorBrush><SolidColorBrush x:Key="ScBorderHover">#5ACDC2</SolidColorBrush><SolidColorBrush x:Key="ScInputBorder">#65737E</SolidColorBrush>
+     <SolidColorBrush x:Key="ScText">#F3F7F7</SolidColorBrush><SolidColorBrush x:Key="ScSoft">#CAD2D8</SolidColorBrush><SolidColorBrush x:Key="ScMuted">#A7B2BB</SolidColorBrush>
+     <SolidColorBrush x:Key="ScAccentText">#62DDD1</SolidColorBrush><SolidColorBrush x:Key="ScSelected">#17302F</SolidColorBrush><SolidColorBrush x:Key="ScBadge">#1B2026</SolidColorBrush>
+     <SolidColorBrush x:Key="ScLine">#272E35</SolidColorBrush><SolidColorBrush x:Key="ScQuiet">#101317</SolidColorBrush>
+     <SolidColorBrush x:Key="ScCodeBackground">#101317</SolidColorBrush><SolidColorBrush x:Key="ScCodeComment">#98A6AF</SolidColorBrush><SolidColorBrush x:Key="ScCodeString">#DCC49D</SolidColorBrush><SolidColorBrush x:Key="ScCodeVariable">#91D8D2</SolidColorBrush><SolidColorBrush x:Key="ScCodeKeyword">#B4B9EA</SolidColorBrush>
+     <SolidColorBrush x:Key="ExpanderHeaderBackground">#14171B</SolidColorBrush><SolidColorBrush x:Key="ExpanderHeaderBackgroundPointerOver">#1B2026</SolidColorBrush><SolidColorBrush x:Key="ExpanderHeaderBackgroundPressed">#17302F</SolidColorBrush>
+     <SolidColorBrush x:Key="ExpanderHeaderBorderBrush">#303840</SolidColorBrush><SolidColorBrush x:Key="ExpanderHeaderBorderBrushPointerOver">#5ACDC2</SolidColorBrush><SolidColorBrush x:Key="ExpanderContentBackground">#14171B</SolidColorBrush><SolidColorBrush x:Key="ExpanderContentBorderBrush">#303840</SolidColorBrush>
+     <SolidColorBrush x:Key="ScLink">#62DDD1</SolidColorBrush><SolidColorBrush x:Key="ScLinkSoft">#17302F</SolidColorBrush><SolidColorBrush x:Key="ScSuccess">#75D6A5</SolidColorBrush><SolidColorBrush x:Key="ScSuccessSoft">#142D23</SolidColorBrush>
+     <SolidColorBrush x:Key="ScPrimary">#66FCF1</SolidColorBrush><SolidColorBrush x:Key="ScPrimaryText">#0B0C10</SolidColorBrush><SolidColorBrush x:Key="ScPrimaryHover">#8CFFF5</SolidColorBrush><SolidColorBrush x:Key="ScPrimaryPressed">#45D6CC</SolidColorBrush>
+     <SolidColorBrush x:Key="ScBrandBackground">#17302F</SolidColorBrush><SolidColorBrush x:Key="ScBrandInk">#F3F7F7</SolidColorBrush>
+     <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundChecked">#092D30</SolidColorBrush><SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundCheckedPointerOver">#092D30</SolidColorBrush><SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundCheckedPressed">#092D30</SolidColorBrush>
+    </ResourceDictionary>
+    <ResourceDictionary x:Key="Light">
+     <SolidColorBrush x:Key="ScDanger">#B52F4A</SolidColorBrush><SolidColorBrush x:Key="ScDangerSoft">#FBEAEE</SolidColorBrush><SolidColorBrush x:Key="ScDangerLine">#F0C4CE</SolidColorBrush><SolidColorBrush x:Key="ScDangerMark">#40E0405F</SolidColorBrush>
+     <SolidColorBrush x:Key="ScWarning">#9A6412</SolidColorBrush><SolidColorBrush x:Key="ScWarningSoft">#FBF1DC</SolidColorBrush><SolidColorBrush x:Key="ScWarningLine">#EED9A8</SolidColorBrush><SolidColorBrush x:Key="ScSuccessLine">#B7E4C7</SolidColorBrush><SolidColorBrush x:Key="ScLinkLine">#C5D7FA</SolidColorBrush>
+     <SolidColorBrush x:Key="ScBackground">#F7F9FB</SolidColorBrush><SolidColorBrush x:Key="ScBackdrop">#EEF2F5</SolidColorBrush>
+     <SolidColorBrush x:Key="ScSidebar">#F7F9FB</SolidColorBrush><SolidColorBrush x:Key="ScSurface">#FBFCFD</SolidColorBrush>
+     <LinearGradientBrush x:Key="ScHero" StartPoint="0%,0%" EndPoint="100%,100%"><GradientStop Color="#F7FAFB" Offset="0"/><GradientStop Color="#EAF3F5" Offset="1"/></LinearGradientBrush>
+     <SolidColorBrush x:Key="ScRaised">#EDF1F4</SolidColorBrush><SolidColorBrush x:Key="ScHover">#EEF4F6</SolidColorBrush>
+     <SolidColorBrush x:Key="ScBorder">#DCE4EB</SolidColorBrush><SolidColorBrush x:Key="ScBorderHover">#69B6BE</SolidColorBrush><SolidColorBrush x:Key="ScInputBorder">#DCE4EB</SolidColorBrush>
+     <SolidColorBrush x:Key="ScText">#192632</SolidColorBrush><SolidColorBrush x:Key="ScSoft">#5D6E80</SolidColorBrush><SolidColorBrush x:Key="ScMuted">#7C8A9C</SolidColorBrush>
+     <SolidColorBrush x:Key="ScAccentText">#008F9E</SolidColorBrush><SolidColorBrush x:Key="ScSelected">#E8F4F5</SolidColorBrush><SolidColorBrush x:Key="ScBadge">#EDF1F4</SolidColorBrush>
+     <SolidColorBrush x:Key="ScLine">#E2E8EE</SolidColorBrush><SolidColorBrush x:Key="ScQuiet">#F0F3F6</SolidColorBrush>
+     <SolidColorBrush x:Key="ExpanderHeaderBackground">#FBFCFD</SolidColorBrush><SolidColorBrush x:Key="ExpanderHeaderBackgroundPointerOver">#EDF1F4</SolidColorBrush><SolidColorBrush x:Key="ExpanderHeaderBackgroundPressed">#E8F4F5</SolidColorBrush>
+     <SolidColorBrush x:Key="ExpanderHeaderBorderBrush">#DCE4EB</SolidColorBrush><SolidColorBrush x:Key="ExpanderHeaderBorderBrushPointerOver">#69B6BE</SolidColorBrush><SolidColorBrush x:Key="ExpanderContentBackground">#FBFCFD</SolidColorBrush><SolidColorBrush x:Key="ExpanderContentBorderBrush">#DCE4EB</SolidColorBrush>
+     <SolidColorBrush x:Key="ScLink">#008F9E</SolidColorBrush><SolidColorBrush x:Key="ScLinkSoft">#E8F4F5</SolidColorBrush><SolidColorBrush x:Key="ScSuccess">#08A469</SolidColorBrush><SolidColorBrush x:Key="ScSuccessSoft">#E5F9EE</SolidColorBrush>
+     <SolidColorBrush x:Key="ScCodeBackground">#172531</SolidColorBrush><SolidColorBrush x:Key="ScCodeComment">#7F98A8</SolidColorBrush><SolidColorBrush x:Key="ScCodeString">#E8C776</SolidColorBrush><SolidColorBrush x:Key="ScCodeVariable">#4EDDDD</SolidColorBrush><SolidColorBrush x:Key="ScCodeKeyword">#A8C8F1</SolidColorBrush>
+     <SolidColorBrush x:Key="ScPrimary">#0EA8B5</SolidColorBrush><SolidColorBrush x:Key="ScPrimaryText">#102C34</SolidColorBrush><SolidColorBrush x:Key="ScPrimaryHover">#0997A5</SolidColorBrush><SolidColorBrush x:Key="ScPrimaryPressed">#078794</SolidColorBrush>
+     <SolidColorBrush x:Key="ScBrandBackground">#101317</SolidColorBrush><SolidColorBrush x:Key="ScBrandInk">#F3F7F7</SolidColorBrush>
+     <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundChecked">#FFFFFF</SolidColorBrush><SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundCheckedPointerOver">#FFFFFF</SolidColorBrush><SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundCheckedPressed">#FFFFFF</SolidColorBrush>
+    </ResourceDictionary>
+   </ResourceDictionary.ThemeDictionaries>
+   <SolidColorBrush x:Key="ScAccent">#66FCF1</SolidColorBrush><SolidColorBrush x:Key="ScTeal">#45A29E</SolidColorBrush>
+  </ResourceDictionary>
+ </Application.Resources>
+ <Application.Styles>
+  <FluentTheme><FluentTheme.Palettes><ColorPaletteResources x:Key="Dark" Accent="#66FCF1"/><ColorPaletteResources x:Key="Light" Accent="#0EA8B5"/></FluentTheme.Palettes></FluentTheme>
+  <Style Selector="Window"><Setter Property="FontFamily" Value="{StaticResource ScInterfaceFont}"/><Setter Property="FontSize" Value="14"/><Setter Property="Background" Value="{DynamicResource ScBackground}"/><Setter Property="Foreground" Value="{DynamicResource ScText}"/></Style>
+  <Style Selector="TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScText}"/></Style>
+  <Style Selector="TextBlock.muted"><Setter Property="Foreground" Value="{DynamicResource ScMuted}"/><Setter Property="FontWeight" Value="Medium"/></Style>
+  <Style Selector="TextBlock.soft"><Setter Property="Foreground" Value="{DynamicResource ScSoft}"/><Setter Property="FontWeight" Value="Medium"/></Style>
+  <Style Selector="TextBlock.accent"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="TextBlock.eyebrow"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/><Setter Property="FontSize" Value="10"/><Setter Property="LetterSpacing" Value="1.7"/><Setter Property="FontWeight" Value="Medium"/></Style>
+  <Style Selector="TextBlock.heading"><Setter Property="FontFamily" Value="{StaticResource ScHeadingFont}"/><Setter Property="FontSize" Value="26"/><Setter Property="FontWeight" Value="Bold"/></Style>
+  <Style Selector="TextBlock.display"><Setter Property="FontFamily" Value="{StaticResource ScHeadingFont}"/><Setter Property="FontSize" Value="28"/><Setter Property="FontWeight" Value="Bold"/></Style>
+  <Style Selector="TextBlock.section"><Setter Property="FontSize" Value="15"/><Setter Property="FontWeight" Value="Medium"/></Style>
+  <Style Selector="TextBlock.mono"><Setter Property="FontFamily" Value="{StaticResource ScCodeFont}"/><Setter Property="FontWeight" Value="Medium"/></Style>
+  <Style Selector="icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScMuted}"/></Style>
+  <Style Selector="Border.iconBadge"><Setter Property="Background" Value="{DynamicResource ScBadge}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/><Setter Property="BorderThickness" Value="1"/></Style>
+  <Style Selector="Border.iconBadge icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="Border.pill"><Setter Property="Background" Value="{DynamicResource ScBadge}"/><Setter Property="CornerRadius" Value="6"/><Setter Property="Padding" Value="9,4"/><Setter Property="HorizontalAlignment" Value="Left"/></Style>
+  <Style Selector="Border.card"><Setter Property="Background" Value="{DynamicResource ScSurface}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="12"/><Setter Property="Padding" Value="18"/></Style>
+  <Style Selector="Border.hero"><Setter Property="Background" Value="{DynamicResource ScHero}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorderHover}"/><Setter Property="Padding" Value="28"/><Setter Property="BoxShadow" Value="0 8 40 -24 #8066FCF1"/></Style>
+  <Style Selector="Button">
+   <Setter Property="CornerRadius" Value="8"/><Setter Property="Padding" Value="13,9"/><Setter Property="MinHeight" Value="38"/><Setter Property="Background" Value="{DynamicResource ScRaised}"/><Setter Property="Foreground" Value="{DynamicResource ScText}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/><Setter Property="BorderThickness" Value="1"/>
+   <Setter Property="Template"><ControlTemplate><Grid><ContentPresenter Name="PART_ContentPresenter" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Padding="{TemplateBinding Padding}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/><Border Name="FocusRing" IsVisible="False" IsHitTestVisible="False" BorderBrush="{DynamicResource ScAccentText}" BorderThickness="2" CornerRadius="10" Margin="-4"/></Grid></ControlTemplate></Setter>
+  </Style>
+  <Style Selector="Button:pointerover"><Setter Property="Background" Value="{DynamicResource ScHover}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorderHover}"/></Style>
+  <Style Selector="Button:pressed"><Setter Property="Background" Value="{DynamicResource ScSelected}"/></Style>
+  <Style Selector="Button:disabled"><Setter Property="Opacity" Value="0.5"/></Style>
+  <Style Selector="Button:focus-visible /template/ Border#FocusRing"><Setter Property="IsVisible" Value="True"/></Style>
+  <Style Selector="Button.primary"><Setter Property="Background" Value="{DynamicResource ScPrimary}"/><Setter Property="Foreground" Value="{DynamicResource ScPrimaryText}"/><Setter Property="BorderBrush" Value="{DynamicResource ScPrimary}"/><Setter Property="FontWeight" Value="SemiBold"/></Style>
+  <Style Selector="Button.primary:pointerover"><Setter Property="Background" Value="{DynamicResource ScPrimaryHover}"/></Style>
+  <Style Selector="Button.primary:pressed"><Setter Property="Background" Value="{DynamicResource ScPrimaryPressed}"/></Style>
+  <Style Selector="Button.ghost"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderBrush" Value="Transparent"/><Setter Property="Foreground" Value="{DynamicResource ScMuted}"/></Style>
+  <Style Selector="Button.ghost:pointerover"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="Foreground" Value="{DynamicResource ScText}"/></Style>
+  <Style Selector="Button.nav"><Setter Property="HorizontalAlignment" Value="Stretch"/><Setter Property="HorizontalContentAlignment" Value="Stretch"/><Setter Property="Background" Value="Transparent"/><Setter Property="BorderBrush" Value="Transparent"/><Setter Property="Padding" Value="12,11"/><Setter Property="MinHeight" Value="44"/></Style>
+  <Style Selector="Button.nav TextBlock"><Setter Property="FontFamily" Value="{StaticResource ScHeadingFont}"/><Setter Property="Foreground" Value="{DynamicResource ScSoft}"/><Setter Property="FontWeight" Value="SemiBold"/></Style>
+  <Style Selector="Button.nav:pointerover"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/></Style>
+  <Style Selector="Button.nav.active"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorderHover}"/></Style>
+  <Style Selector="Button.nav.active TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScText}"/></Style>
+  <Style Selector="Button.nav.active icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="Button.tab"><Setter Property="CornerRadius" Value="8"/><Setter Property="Padding" Value="13,8"/><Setter Property="MinHeight" Value="34"/><Setter Property="Background" Value="Transparent"/><Setter Property="BorderBrush" Value="Transparent"/><Setter Property="Foreground" Value="{DynamicResource ScMuted}"/></Style>
+  <Style Selector="Button.tab.active"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorderHover}"/></Style>
+  <Style Selector="ListBox"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderThickness" Value="0"/></Style>
+  <Style Selector="ListBoxItem"><Setter Property="Padding" Value="16"/><Setter Property="Margin" Value="0,0,0,8"/><Setter Property="CornerRadius" Value="12"/></Style>
+  <Style Selector="ListBoxItem:selected /template/ ContentPresenter"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorderHover}"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="12"/></Style>
+  <Style Selector="TextBox"><Setter Property="CornerRadius" Value="10"/><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="Foreground" Value="{DynamicResource ScText}"/><Setter Property="BorderBrush" Value="{DynamicResource ScInputBorder}"/><Setter Property="Padding" Value="13,10"/><Setter Property="SelectionBrush" Value="{DynamicResource ScSelected}"/><Setter Property="PlaceholderForeground" Value="{DynamicResource ScMuted}"/></Style>
+  <Style Selector="TextBox:focus"><Setter Property="BorderBrush" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="ComboBox"><Setter Property="CornerRadius" Value="10"/><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="Foreground" Value="{DynamicResource ScText}"/><Setter Property="BorderBrush" Value="{DynamicResource ScInputBorder}"/><Setter Property="MinHeight" Value="38"/></Style>
+  <Style Selector="Expander"><Setter Property="Padding" Value="0,6"/><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="10"/></Style>
+  <Style Selector="ProgressBar"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/><Setter Property="Background" Value="{DynamicResource ScRaised}"/><Setter Property="Height" Value="5"/></Style>
+  <Style Selector="ScrollBar:vertical"><Setter Property="Width" Value="6"/></Style>
+  <Style Selector="ScrollBar:horizontal"><Setter Property="Height" Value="6"/></Style>
+  <!-- Caption controls are outside the application's content. Keep their geometry and interaction independent. -->
+  <Style Selector="WindowDrawnDecorations /template/ Button">
+   <Setter Property="MinHeight" Value="0"/><Setter Property="Width" Value="44"/><Setter Property="Height" Value="38"/><Setter Property="Padding" Value="0"/><Setter Property="CornerRadius" Value="6"/><Setter Property="BorderThickness" Value="0"/><Setter Property="VerticalAlignment" Value="Center"/>
+   <Setter Property="Template"><ControlTemplate><ContentPresenter Name="PART_ContentPresenter" Background="Transparent" Content="{TemplateBinding Content}" CornerRadius="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/></ControlTemplate></Setter>
+  </Style>
+  <!-- The overlay panel reserves room for the hidden full-screen button; size it to its content so captions sit on the right edge. -->
+  <Style Selector="WindowDrawnDecorations /template/ StackPanel#PART_OverlayPanel"><Setter Property="Width" Value="NaN"/><Setter Property="MinWidth" Value="0"/><Setter Property="Spacing" Value="2"/><Setter Property="Margin" Value="0,0,8,0"/><Setter Property="HorizontalAlignment" Value="Right"/></Style>
+  <Style Selector="WindowDrawnDecorations /template/ Button:pointerover /template/ ContentPresenter"><Setter Property="Background" Value="{DynamicResource ScHover}"/></Style>
+  <Style Selector="WindowDrawnDecorations /template/ Button:pressed /template/ ContentPresenter"><Setter Property="Background" Value="{DynamicResource ScSelected}"/></Style>
+  <Style Selector="WindowDrawnDecorations /template/ Button#PART_CloseButton:pointerover /template/ ContentPresenter"><Setter Property="Background" Value="#C9384A"/></Style>
+  <Style Selector="WindowDrawnDecorations /template/ Button#PART_CloseButton:pointerover Path"><Setter Property="Fill" Value="White"/></Style>
+  <Style Selector="Border.libraryPane"><Setter Property="Background" Value="{DynamicResource ScSurface}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="14"/></Style>
+  <Style Selector="ListBox.catalog"><Setter Property="Padding" Value="6"/></Style>
+  <Style Selector="ListBox.catalog ListBoxItem"><Setter Property="HorizontalContentAlignment" Value="Stretch"/><Setter Property="Padding" Value="12,14"/><Setter Property="Margin" Value="0,0,0,3"/><Setter Property="CornerRadius" Value="9"/></Style>
+  <Style Selector="ListBox.catalog ListBoxItem /template/ ContentPresenter"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderThickness" Value="1"/><Setter Property="BorderBrush" Value="Transparent"/><Setter Property="CornerRadius" Value="9"/></Style>
+  <Style Selector="ListBox.catalog ListBoxItem:pointerover /template/ ContentPresenter"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/></Style>
+  <Style Selector="ListBox.catalog ListBoxItem:selected /template/ ContentPresenter"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorderHover}"/></Style>
+  <Style Selector="ListBox.catalog ListBoxItem:focus-visible /template/ ContentPresenter"><Setter Property="BorderBrush" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="Button.iconAction"><Setter Property="Width" Value="34"/><Setter Property="Height" Value="34"/><Setter Property="MinHeight" Value="0"/><Setter Property="Padding" Value="0"/><Setter Property="HorizontalContentAlignment" Value="Center"/></Style>
+  <Style Selector="Button.iconAction.active"><Setter Property="Background" Value="{DynamicResource ScSelected}"/></Style>
+  <Style Selector="Button.iconAction.active icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="Button.primary icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScPrimaryText}"/></Style>
+  <Style Selector="Button.primary TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScPrimaryText}"/></Style>
+  <Style Selector="Button.nav.active"><Setter Property="BorderBrush" Value="Transparent"/></Style>
+  <Style Selector="ComboBox.libraryFilter"><Setter Property="MinHeight" Value="34"/><Setter Property="FontSize" Value="12"/><Setter Property="Padding" Value="11,6"/><Setter Property="Background" Value="Transparent"/></Style>
+  <Style Selector="GridSplitter.librarySplitter"><Setter Property="Background" Value="Transparent"/></Style>
+  <Style Selector="GridSplitter.librarySplitter:pointerover"><Setter Property="Background" Value="{DynamicResource ScBorderHover}"/></Style>
+  <Style Selector="TabControl.aiTabs TabItem"><Setter Property="FontSize" Value="13"/><Setter Property="Padding" Value="12,10"/><Setter Property="MinHeight" Value="36"/></Style>
+  <Style Selector="Button.aiModel"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="Padding" Value="13,8"/><Setter Property="CornerRadius" Value="12"/></Style>
+  <Style Selector="Button.aiSuggestion"><Setter Property="Background" Value="{DynamicResource ScSurface}"/><Setter Property="Padding" Value="14,12"/><Setter Property="CornerRadius" Value="14"/><Setter Property="MinHeight" Value="68"/></Style>
+  <Style Selector="Button.aiSuggestion:pointerover"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorderHover}"/></Style>
+  <Style Selector="Border.aiHeroBadge"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/></Style>
+  <Style Selector="Border.aiComposer"><Setter Property="Background" Value="{DynamicResource ScSurface}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorderHover}"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="12"/><Setter Property="BoxShadow" Value="0 4 16 -12 #30000000"/></Style>
+  <Style Selector="Border.aiComposer:focus-within"><Setter Property="BorderBrush" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="Button.aiContext"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="BorderThickness" Value="0"/><Setter Property="Padding" Value="11,8"/><Setter Property="CornerRadius" Value="10"/></Style>
+  <Style Selector="Button.aiContext:pointerover"><Setter Property="Background" Value="{DynamicResource ScSelected}"/></Style>
+  <Style Selector="TextBox.aiPrompt"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderThickness" Value="0"/><Setter Property="Padding" Value="4,8"/></Style>
+  <Style Selector="TextBox.aiPrompt"><Setter Property="PlaceholderForeground" Value="{DynamicResource ScMuted}"/></Style>
+  <Style Selector="TextBox.aiPrompt /template/ TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScMuted}"/><Setter Property="Opacity" Value="1"/></Style>
+  <Style Selector="TextBox.aiPrompt:focus /template/ Border#PART_BorderElement"><Setter Property="BorderThickness" Value="0"/></Style>
+  <Style Selector="ComboBox.aiTask"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderThickness" Value="0"/><Setter Property="FontSize" Value="12"/><Setter Property="Padding" Value="8,7"/><Setter Property="MinHeight" Value="36"/><Setter Property="HorizontalAlignment" Value="Left"/></Style>
+  <Style Selector="Border.aiNotice"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorderHover}"/><Setter Property="BorderThickness" Value="1"/></Style>
+  <Style Selector="Border.aiUserBubble"><Setter Property="Background" Value="{DynamicResource ScRaised}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/><Setter Property="BorderThickness" Value="1"/></Style>
+  <Style Selector="TabControl.aiWorkspace TabItem">
+   <Setter Property="FontSize" Value="12"/><Setter Property="Padding" Value="13,8"/><Setter Property="Margin" Value="0,0,6,0"/><Setter Property="MinHeight" Value="34"/><Setter Property="Foreground" Value="{DynamicResource ScMuted}"/><Setter Property="Background" Value="Transparent"/>
+   <Setter Property="Template"><ControlTemplate><Border Background="{TemplateBinding Background}" CornerRadius="9" Padding="{TemplateBinding Padding}"><ContentPresenter Content="{TemplateBinding Header}" ContentTemplate="{TemplateBinding HeaderTemplate}" HorizontalAlignment="Center" VerticalAlignment="Center"/></Border></ControlTemplate></Setter>
+  </Style>
+  <Style Selector="TabControl.aiWorkspace TabItem:pointerover"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/></Style>
+  <Style Selector="TabControl.aiWorkspace TabItem:selected"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="TabControl.aiWorkspace TabItem:focus-visible"><Setter Property="Background" Value="{DynamicResource ScHover}"/></Style>
+  <Style Selector="TabControl.aiWorkspace.single /template/ ItemsPresenter#PART_ItemsPresenter"><Setter Property="IsVisible" Value="False"/></Style>
+  <Style Selector="TextBox:focus /template/ Border#PART_BorderElement"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/></Style>
+  <Style Selector="TextBox.aiPrompt:focus /template/ Border#PART_BorderElement"><Setter Property="Background" Value="Transparent"/></Style>
+  <Style Selector="TextBox.aiPrompt:pointerover /template/ Border#PART_BorderElement"><Setter Property="Background" Value="Transparent"/></Style>
+  <!-- SC AI composer: chips for context and the auto-detected task. -->
+  <Style Selector="Border.aiChipFrame"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="9"/><Setter Property="MinHeight" Value="30"/></Style>
+  <Style Selector="Button.aiChip"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderThickness" Value="0"/><Setter Property="Padding" Value="10,5"/><Setter Property="MinHeight" Value="28"/><Setter Property="CornerRadius" Value="8"/></Style>
+  <Style Selector="Button.aiChip TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScMuted}"/></Style>
+  <Style Selector="Button.aiChip.active TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScText}"/></Style>
+  <Style Selector="Button.aiChip.active icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="Button.aiChip:pointerover"><Setter Property="Background" Value="{DynamicResource ScSelected}"/></Style>
+  <Style Selector="Button.aiIntent"><Setter Property="Background" Value="{DynamicResource ScBadge}"/><Setter Property="BorderThickness" Value="0"/><Setter Property="Padding" Value="10,6"/><Setter Property="MinHeight" Value="32"/><Setter Property="CornerRadius" Value="16"/></Style>
+  <Style Selector="Button.aiIntent:pointerover"><Setter Property="Background" Value="{DynamicResource ScSelected}"/></Style>
+  <Style Selector="Button.aiIntent icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="Button.chip"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="Padding" Value="11,5"/><Setter Property="MinHeight" Value="30"/><Setter Property="CornerRadius" Value="8"/><Setter Property="FontSize" Value="12"/><Setter Property="Foreground" Value="{DynamicResource ScSoft}"/></Style>
+  <Style Selector="Button.chip:pointerover"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="Foreground" Value="{DynamicResource ScText}"/></Style>
+  <!-- AI settings: model source cards. -->
+  <Style Selector="Button.sourceCard"><Setter Property="Background" Value="{DynamicResource ScSurface}"/><Setter Property="Padding" Value="16,14"/><Setter Property="CornerRadius" Value="14"/><Setter Property="MinHeight" Value="84"/></Style>
+  <Style Selector="Button.sourceCard.active"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="BorderBrush" Value="{DynamicResource ScAccentText}"/><Setter Property="BorderThickness" Value="2"/></Style>
+  <Style Selector="Slider"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/><Setter Property="MinHeight" Value="34"/></Style>
+  <!-- Library: compact list, row actions appear on hover or selection. -->
+  <Style Selector="Border.segmented"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="10"/><Setter Property="Padding" Value="2"/></Style>
+  <Style Selector="Border.segmented Button.tab"><Setter Property="MinHeight" Value="30"/><Setter Property="Padding" Value="11,5"/></Style>
+  <Style Selector="ListBox.scriptList ListBoxItem"><Setter Property="Padding" Value="12,9"/><Setter Property="Margin" Value="0,0,0,2"/></Style>
+  <Style Selector="ListBox.scriptList StackPanel.rowActions"><Setter Property="Opacity" Value="1"/></Style>
+  <Style Selector="ListBox.scriptList ListBoxItem:pointerover StackPanel.rowActions"><Setter Property="Opacity" Value="1"/></Style>
+  <Style Selector="ListBox.scriptList ListBoxItem:selected StackPanel.rowActions"><Setter Property="Opacity" Value="1"/></Style>
+  <Style Selector="Button.rowRun"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderThickness" Value="1"/><Setter Property="Padding" Value="10,6"/><Setter Property="MinHeight" Value="32"/><Setter Property="CornerRadius" Value="8"/></Style>
+  <Style Selector="Button.rowRun icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="Button.rowRun:pointerover"><Setter Property="Background" Value="{DynamicResource ScSelected}"/></Style>
+  <Style Selector="Button.rowRun:pointerover TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScText}"/></Style>
+  <Style Selector="Button.rowRun:pointerover icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScText}"/></Style>
+  <!-- Quiet home surfaces and semantic states shared across pages. -->
+  <Style Selector="Border.homeHero"><Setter Property="Background" Value="{DynamicResource ScHero}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="12"/><Setter Property="Padding" Value="24,22"/></Style>
+  <Style Selector="TextBlock.success"><Setter Property="Foreground" Value="{DynamicResource ScSuccess}"/></Style>
+  <Style Selector="Button.link"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderBrush" Value="Transparent"/><Setter Property="Padding" Value="6,4"/><Setter Property="MinHeight" Value="28"/></Style>
+  <Style Selector="Button.link:pointerover"><Setter Property="Background" Value="{DynamicResource ScSelected}"/></Style>
+  <Style Selector="Button.link TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScLink}"/></Style>
+  <Style Selector="Button.link icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScLink}"/></Style>
+  <Style Selector="Border.statusPill"><Setter Property="Background" Value="{DynamicResource ScRaised}"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Padding" Value="7,3"/></Style>
+  <Style Selector="Border.statusPill TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScMuted}"/></Style>
+  <Style Selector="Border.statusPill.ready"><Setter Property="Background" Value="{DynamicResource ScSuccessSoft}"/></Style>
+  <Style Selector="Border.statusPill.ready TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScSuccess}"/></Style>
+  <Style Selector="Button.nav.utility"><Setter Property="MinHeight" Value="36"/><Setter Property="Padding" Value="12,8"/><Setter Property="FontSize" Value="13"/></Style>
+  <Style Selector="Button.nav.active TextBlock"><Setter Property="FontWeight" Value="Bold"/></Style>
+  <Style Selector="Button.ghost TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScMuted}"/></Style>
+  <Style Selector="Button.ghost:pointerover TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScText}"/></Style>
+  <Style Selector="Button.danger TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScDanger}"/></Style>
+  <Style Selector="Button.danger"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderBrush" Value="Transparent"/><Setter Property="Foreground" Value="{DynamicResource ScDanger}"/></Style>
+  <Style Selector="Button.danger:pointerover"><Setter Property="Background" Value="{DynamicResource ScDangerSoft}"/></Style>
+  <Style Selector="ContextMenu"><Setter Property="CornerRadius" Value="12"/><Setter Property="Padding" Value="6"/><Setter Property="Background" Value="{DynamicResource ScSurface}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/></Style>
+  <Style Selector="MenuItem"><Setter Property="CornerRadius" Value="8"/><Setter Property="Padding" Value="10,7"/><Setter Property="FontSize" Value="13"/></Style>
+  <Style Selector="MenuItem icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScMuted}"/></Style>
+  <!-- Reference design: quiet white surfaces, fine separators and cyan actions. -->
+  <Style Selector="Window"><Setter Property="FontFamily" Value="{StaticResource ScInterfaceFont}"/><Setter Property="FontSize" Value="14"/><Setter Property="FontWeight" Value="Medium"/></Style>
+  <Style Selector="TextBlock.heading"><Setter Property="FontFamily" Value="{StaticResource ScHeadingFont}"/><Setter Property="FontSize" Value="32"/><Setter Property="LetterSpacing" Value="-1.1"/><Setter Property="FontWeight" Value="Bold"/></Style>
+  <Style Selector="TextBlock.eyebrow"><Setter Property="FontSize" Value="10"/><Setter Property="FontWeight" Value="SemiBold"/><Setter Property="LetterSpacing" Value="1.4"/></Style>
+  <Style Selector="TextBlock.navLabel"><Setter Property="FontSize" Value="9.5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="LetterSpacing" Value="1.2"/><Setter Property="Foreground" Value="{DynamicResource ScMuted}"/></Style>
+  <Style Selector="Button"><Setter Property="Background" Value="{DynamicResource ScSurface}"/><Setter Property="FontSize" Value="12"/><Setter Property="CornerRadius" Value="8"/></Style>
+  <Style Selector="Button.nav"><Setter Property="Padding" Value="13,11"/><Setter Property="MinHeight" Value="43"/></Style>
+  <Style Selector="Button.nav.active TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="Button.tab"><Setter Property="Padding" Value="12,7"/><Setter Property="MinHeight" Value="30"/><Setter Property="FontSize" Value="11"/></Style>
+  <Style Selector="Button.tab.active"><Setter Property="BorderBrush" Value="Transparent"/></Style>
+  <Style Selector="Button.tab.active TextBlock"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="Button.ink"><Setter Property="Background" Value="#172531"/><Setter Property="BorderBrush" Value="#172531"/><Setter Property="Foreground" Value="White"/></Style>
+  <Style Selector="Button.ink TextBlock"><Setter Property="Foreground" Value="White"/></Style>
+  <Style Selector="Button.ink icons|LucideIcon.glyph"><Setter Property="Foreground" Value="#37D3D8"/></Style>
+  <Style Selector="Button.ink:pointerover"><Setter Property="Background" Value="#263D4C"/></Style>
+  <Style Selector="Border.card"><Setter Property="Padding" Value="18"/><Setter Property="CornerRadius" Value="10"/></Style>
+  <Style Selector="Border.iconBadge"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="BorderBrush" Value="{DynamicResource ScLine}"/></Style>
+  <Style Selector="Border.iconBadge.featured"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="BorderBrush" Value="#C3E1E5"/></Style>
+  <Style Selector="Border.pill"><Setter Property="CornerRadius" Value="5"/><Setter Property="Padding" Value="9,4"/></Style>
+  <Style Selector="TextBox"><Setter Property="CornerRadius" Value="8"/><Setter Property="MinHeight" Value="35"/><Setter Property="Padding" Value="12,8"/><Setter Property="FontSize" Value="12"/></Style>
+  <Style Selector="ComboBox"><Setter Property="CornerRadius" Value="7"/><Setter Property="MinHeight" Value="33"/><Setter Property="Padding" Value="10,6"/><Setter Property="FontSize" Value="12"/><Setter Property="Background" Value="{DynamicResource ScSurface}"/></Style>
+  <Style Selector="ListBox.referenceList"><Setter Property="Padding" Value="0"/></Style>
+  <Style Selector="ListBox.referenceList ListBoxItem"><Setter Property="Margin" Value="0"/><Setter Property="Padding" Value="16,18"/><Setter Property="CornerRadius" Value="0"/></Style>
+  <Style Selector="ListBox.referenceList ListBoxItem /template/ ContentPresenter"><Setter Property="CornerRadius" Value="0"/><Setter Property="BorderThickness" Value="0,0,0,1"/><Setter Property="BorderBrush" Value="{DynamicResource ScLine}"/></Style>
+  <Style Selector="ListBox.referenceList ListBoxItem:selected /template/ ContentPresenter"><Setter Property="Background" Value="{DynamicResource ScSelected}"/><Setter Property="BorderBrush" Value="{DynamicResource ScPrimary}"/><Setter Property="BorderThickness" Value="3,0,0,0"/><Setter Property="CornerRadius" Value="0"/></Style>
+  <Style Selector="ListBox.referenceList ListBoxItem:pointerover /template/ ContentPresenter"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/></Style>
+  <Style Selector="ListBox.referenceList ListBoxItem:selected:pointerover /template/ ContentPresenter"><Setter Property="Background" Value="{DynamicResource ScSelected}"/></Style>
+  <Style Selector="ToggleSwitch"><Setter Property="OnContent" Value=""/><Setter Property="OffContent" Value=""/><Setter Property="MinWidth" Value="42"/><Setter Property="MinHeight" Value="24"/></Style>
+  <Style Selector="Border.aiUserBubble"><Setter Property="Background" Value="{DynamicResource ScSelected}"/></Style>
+  <Style Selector="Border.aiComposer"><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/><Setter Property="BoxShadow" Value="0 0 0 0 Transparent"/></Style>
+  <Style Selector="Button.aiSuggestion"><Setter Property="CornerRadius" Value="8"/></Style>
+  <Style Selector="TextBlock.section"><Setter Property="FontFamily" Value="{StaticResource ScHeadingFont}"/><Setter Property="FontWeight" Value="Bold"/></Style>
+  <Style Selector="ListBox.runList ListBoxItem"><Setter Property="Padding" Value="12,7"/></Style>
+  <Style Selector="ScrollBar"><Setter Property="IsVisible" Value="False"/><Setter Property="IsHitTestVisible" Value="False"/></Style>
+  <Style Selector="TextBox"><Setter Property="Background" Value="{DynamicResource ScSidebar}"/></Style>
+  <!-- Buttons and headings use Manrope's static semibold and bold faces. -->
+  <Style Selector="Button"><Setter Property="FontFamily" Value="{StaticResource ScHeadingFont}"/><Setter Property="FontWeight" Value="SemiBold"/></Style>
+  <Style Selector="Border.pill TextBlock"><Setter Property="FontFamily" Value="{StaticResource ScInterfaceFont}"/><Setter Property="FontWeight" Value="Medium"/></Style>
+  <Style Selector="TextBox"><Setter Property="FontFamily" Value="{StaticResource ScInterfaceFont}"/><Setter Property="FontWeight" Value="Medium"/></Style>
+  <Style Selector="ComboBox"><Setter Property="FontFamily" Value="{StaticResource ScInterfaceFont}"/><Setter Property="FontWeight" Value="Medium"/></Style>
+  <Style Selector="SelectableTextBlock"><Setter Property="FontWeight" Value="Medium"/></Style>
+  <!-- Hidden scrollbars keep wheel, touch, keyboard and programmatic scrolling. -->
+  <Style Selector="ScrollViewer"><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="HorizontalScrollBarVisibility" Value="Hidden"/></Style>
+  <Style Selector="ListBox"><Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/></Style>
+  <Style Selector="TextBox"><Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/></Style>
+  <Style Selector="Border.card:pointerover"><Setter Property="BorderBrush" Value="{DynamicResource ScBorderHover}"/><Setter Property="BoxShadow" Value="0 10 24 -16 #303D6370"/></Style>
+  <Style Selector="Button.homeRecent"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderBrush" Value="Transparent"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="10"/></Style>
+  <Style Selector="Button.homeRecent:pointerover"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/></Style>
+  <Style Selector="Button.homeRecent:pointerover /template/ ContentPresenter"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/></Style>
+  <Style Selector="Button.homeRecent:pressed /template/ ContentPresenter"><Setter Property="Background" Value="{DynamicResource ScSelected}"/></Style>
+  <!-- Title bar: quick search entry, status chip and keyboard hints. -->
+  <Style Selector="Button.titleSearch"><Setter Property="Width" Value="340"/><Setter Property="MinHeight" Value="34"/><Setter Property="Padding" Value="12,6,7,6"/><Setter Property="CornerRadius" Value="9"/><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="BorderBrush" Value="{DynamicResource ScLine}"/><Setter Property="HorizontalContentAlignment" Value="Stretch"/><Setter Property="VerticalAlignment" Value="Center"/></Style>
+  <Style Selector="Button.titleSearch:pointerover"><Setter Property="Background" Value="{DynamicResource ScSurface}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorderHover}"/></Style>
+  <Style Selector="Button.titleSearch:pointerover icons|LucideIcon.glyph"><Setter Property="Foreground" Value="{DynamicResource ScAccentText}"/></Style>
+  <Style Selector="Border.keyHint"><Setter Property="Background" Value="{DynamicResource ScSurface}"/><Setter Property="BorderBrush" Value="{DynamicResource ScBorder}"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Padding" Value="6,2"/></Style>
+  <Style Selector="Border.titleStatus"><Setter Property="Background" Value="{DynamicResource ScQuiet}"/><Setter Property="CornerRadius" Value="13"/><Setter Property="Padding" Value="10,5"/></Style>
+ </Application.Styles>
+</Application>

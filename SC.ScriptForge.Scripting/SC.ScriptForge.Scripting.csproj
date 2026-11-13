@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><TargetFramework>net10.0-windows</TargetFramework><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings><RestorePackagesWithLockFile>true</RestorePackagesWithLockFile></PropertyGroup>
+ <ItemGroup>
+  <ProjectReference Include="..\SC.ScriptForge.Core\SC.ScriptForge.Core.csproj" />
+  <Compile Include="..\Services\PowerShellHost.cs;..\Services\PowerShellSyntaxService.cs;..\Services\PowerShellContextService.cs;..\Services\PowerShellDependencyService.cs;..\Services\ScriptParameterService.cs;..\Services\ScriptExecutionService.cs;..\Services\ExecutionPolicyService.cs" Link="Services\%(Filename)%(Extension)" />
+  <EmbeddedResource Include="..\Runtime\*.ps1" LogicalName="SC.ScriptForge.Runtime.%(Filename)%(Extension)" />
+ </ItemGroup>
+</Project>

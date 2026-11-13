@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000018",
+  "Name": "Критические события и ошибки Windows",
+  "Description": "Собирает критические события и ошибки из журналов System или Application.",
+  "Category": "Servers",
+  "Status": "Ready",
+  "Notes": "Только чтение. Нужны права чтения журнала Windows; удалённый доступ зависит от разрешений и брандмауэра. Лимит событий отмечается предупреждением.",
+  "Tags": [
+    "servers",
+    "events",
+    "errors",
+    "ошибки"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Критические события и ошибки Windows",
+      "Description": "Собирает критические события и ошибки из журналов System или Application.",
+      "Notes": "Только чтение. Нужны права чтения журнала Windows; удалённый доступ зависит от разрешений и брандмауэра. Лимит событий отмечается предупреждением."
+    },
+    "en": {
+      "Name": "Critical Windows events and errors",
+      "Description": "Collects critical events and errors from System or Application logs.",
+      "Notes": "Read only. Requires Windows Event Log read access; remote access depends on permissions and firewall rules. Warns when the event limit is reached."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

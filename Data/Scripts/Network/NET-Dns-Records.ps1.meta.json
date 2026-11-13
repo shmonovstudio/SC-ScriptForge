@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000009",
+  "Name": "Проверка DNS-записей",
+  "Description": "Проверяет DNS-записи A, AAAA, MX, CNAME и другие типы.",
+  "Category": "Network",
+  "Status": "Ready",
+  "Notes": "Только чтение. Использует Resolve-DnsName в Windows. Можно указать DNS-сервер; ошибка DNS не выдаётся за пустой успешный результат.",
+  "Tags": [
+    "network",
+    "dns",
+    "lookup",
+    "сеть"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Проверка DNS-записей",
+      "Description": "Проверяет DNS-записи A, AAAA, MX, CNAME и другие типы.",
+      "Notes": "Только чтение. Использует Resolve-DnsName в Windows. Можно указать DNS-сервер; ошибка DNS не выдаётся за пустой успешный результат."
+    },
+    "en": {
+      "Name": "DNS record lookup",
+      "Description": "Looks up A, AAAA, MX, CNAME and other DNS record types.",
+      "Notes": "Read only. Uses Windows Resolve-DnsName. Optionally specify a DNS server; DNS errors are reported as failures."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

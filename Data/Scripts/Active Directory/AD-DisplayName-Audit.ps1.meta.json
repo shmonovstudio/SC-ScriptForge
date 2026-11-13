@@ -1,0 +1,18 @@
+{
+  "Id": "31dac541-57c9-49de-b086-6d5c6e0142cd",
+  "Name": "AD DisplayName Audit",
+  "Description": "Проверяет пользователей AD на пустой или подозрительный DisplayName и сохраняет результаты в CSV.",
+  "Category": "Active Directory",
+  "Status": "Ready",
+  "Notes": "Хорошая основа для модуля проверки данных в AD. Можно расширить проверкой пробелов, отчества и OU.",
+  "Tags": [
+    "ad",
+    "audit",
+    "displayname",
+    "csv"
+  ],
+  "Translations": {},
+  "Favorite": false,
+  "Created": "2026-10-20T12:00:00",
+  "Updated": "2026-10-20T17:48:24.4304527+03:00"
+}

@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000016",
+  "Name": "Истекающие сертификаты Windows",
+  "Description": "Находит просроченные сертификаты и сертификаты с близким сроком окончания.",
+  "Category": "Security",
+  "Status": "Ready",
+  "Notes": "Только чтение. По умолчанию проверяет Cert:\\LocalMachine\\My; можно выбрать другое хранилище. Закрытые ключи не экспортируются.",
+  "Tags": [
+    "security",
+    "certificates",
+    "expiry",
+    "сертификаты"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Истекающие сертификаты Windows",
+      "Description": "Находит просроченные сертификаты и сертификаты с близким сроком окончания.",
+      "Notes": "Только чтение. По умолчанию проверяет Cert:\\LocalMachine\\My; можно выбрать другое хранилище. Закрытые ключи не экспортируются."
+    },
+    "en": {
+      "Name": "Expiring Windows certificates",
+      "Description": "Finds expired certificates and certificates that will expire soon.",
+      "Notes": "Read only. Checks Cert:\\LocalMachine\\My by default; another store can be selected. Private keys are not exported."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

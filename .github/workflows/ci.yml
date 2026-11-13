@@ -1,0 +1,43 @@
+name: Windows checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: windows-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+      DOTNET_NOLOGO: '1'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+      - name: Check repository contents
+        run: ./Tools/Prepare-GitHub.ps1
+      - name: Restore locked dependencies
+        run: dotnet restore SC.ScriptForge.csproj --locked-mode
+      - name: Build and run Windows checks
+        run: ./Tools/Test-Windows.ps1
+      - name: Check AI contracts without a model
+        run: dotnet ./Tests/bin/Release/net10.0-windows/SC.ScriptForge.Checks.dll --ai-only
+      - name: Check resumable downloads with local fixtures
+        run: dotnet ./Tests/bin/Release/net10.0-windows/SC.ScriptForge.Checks.dll --ai-download-only
+      - name: Verify self-contained publication
+        run: ./Tools/Publish-Windows.ps1 -Output artifacts/ci-publish

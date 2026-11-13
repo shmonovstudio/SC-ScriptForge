@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000015",
+  "Name": "Участники локальной группы администраторов",
+  "Description": "Показывает прямых участников группы администраторов независимо от языка Windows.",
+  "Category": "Security",
+  "Status": "Ready",
+  "Notes": "Только чтение. Используется SID S-1-5-32-544. Нужен 64-разрядный PowerShell и модуль LocalAccounts. Удалённый запуск через WinRM; вложенные доменные группы не раскрываются.",
+  "Tags": [
+    "security",
+    "administrators",
+    "users",
+    "администраторы"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Участники локальной группы администраторов",
+      "Description": "Показывает прямых участников группы администраторов независимо от языка Windows.",
+      "Notes": "Только чтение. Используется SID S-1-5-32-544. Нужен 64-разрядный PowerShell и модуль LocalAccounts. Удалённый запуск через WinRM; вложенные доменные группы не раскрываются."
+    },
+    "en": {
+      "Name": "Local Administrators group members",
+      "Description": "Lists direct members of the Administrators group in any Windows language.",
+      "Notes": "Read only. Uses SID S-1-5-32-544. Requires 64-bit PowerShell and LocalAccounts. Remote checks use WinRM; nested domain groups are not expanded."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

@@ -1,0 +1,148 @@
+# Build output, dependency caches and local SDKs
+bin/
+obj/
+dist/
+artifacts/
+publish/
+packages/
+TestResults/
+.tools/
+.avalonia-build-tasks/
+*.nupkg
+*.snupkg
+
+# IDE, assistant and machine-specific settings
+.vs/
+.idea/
+.vscode/
+.claude/
+.codex/
+.agents/
+.aws/
+.azure/
+.ssh/
+.gnupg/
+.kube/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Credentials, signing keys and local configuration
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.key
+*.snk
+secrets.json
+credentials.json
+*.local.json
+ai-settings.json
+ai-installation-folder.json
+preferences.json
+run-history.json
+
+# Diagnostics, reports, backups and packaged applications
+*.log
+*.jsonl
+*.dmp
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.exe
+*.dll
+*.pdb
+*.msi
+*.msix
+*.appx
+*.db
+*.sqlite
+*.sqlite3
+
+# Downloaded AI components; retain documentation and license
+/AI/*
+!/AI/README.md
+!/AI/Models/
+/AI/Models/*
+!/AI/Models/LICENSE-Qwen.txt
+*.gguf
+*.safetensors
+*.onnx
+*.part
+*.download
+*.download.lock
+
+# Internal migration notes, unused prototypes and intermediate assets
+/MIGRATION.md
+/docs/UX-REVIEW.md
+/GlobalUsings-ScriptForge-Hotfix.cs
+/Assets/Brand/apps/
+/Assets/Brand/BrandResources.xaml
+/Assets/alpine-banner.png
+/Assets/alpine-banner.prompt.txt
+/Assets/Licenses-MahApps.txt
+/Assets/Licenses-Lucide.txt
+
+# Data is a user workspace. Only the release allowlist is source code.
+# Keep these exceptions in sync with Build/BundledScripts.props.
+/Data/**
+!/Data/Scripts/
+!/Data/Scripts/*/
+!/Data/Scripts/Active Directory/AD-DisplayName-Audit.ps1
+!/Data/Scripts/Active Directory/AD-DisplayName-Audit.ps1.meta.json
+!/Data/Scripts/Active Directory/AD-Inactive-Users.ps1
+!/Data/Scripts/Active Directory/AD-Inactive-Users.ps1.meta.json
+!/Data/Scripts/Active Directory/AD-Missing-Attributes.ps1
+!/Data/Scripts/Active Directory/AD-Missing-Attributes.ps1.meta.json
+!/Data/Scripts/Active Directory/AD-Name-Quality.ps1
+!/Data/Scripts/Active Directory/AD-Name-Quality.ps1.meta.json
+!/Data/Scripts/Active Directory/AD-Password-Expiry.ps1
+!/Data/Scripts/Active Directory/AD-Password-Expiry.ps1.meta.json
+!/Data/Scripts/Certificates/Local-Certificates.ps1
+!/Data/Scripts/Certificates/Local-Certificates.ps1.meta.json
+!/Data/Scripts/Files/FS-Folder-Sizes.ps1
+!/Data/Scripts/Files/FS-Folder-Sizes.ps1.meta.json
+!/Data/Scripts/Files/FS-Largest-Files.ps1
+!/Data/Scripts/Files/FS-Largest-Files.ps1.meta.json
+!/Data/Scripts/Files/FS-Ntfs-Permissions.ps1
+!/Data/Scripts/Files/FS-Ntfs-Permissions.ps1.meta.json
+!/Data/Scripts/Network/NET-Dns-Records.ps1
+!/Data/Scripts/Network/NET-Dns-Records.ps1.meta.json
+!/Data/Scripts/Network/NET-Ping-List.ps1
+!/Data/Scripts/Network/NET-Ping-List.ps1.meta.json
+!/Data/Scripts/Network/NET-Tcp-Ports.ps1
+!/Data/Scripts/Network/NET-Tcp-Ports.ps1.meta.json
+!/Data/Scripts/Security/SEC-Certificate-Expiry.ps1
+!/Data/Scripts/Security/SEC-Certificate-Expiry.ps1.meta.json
+!/Data/Scripts/Security/SEC-Failed-Logons.ps1
+!/Data/Scripts/Security/SEC-Failed-Logons.ps1.meta.json
+!/Data/Scripts/Security/SEC-Local-Administrators.ps1
+!/Data/Scripts/Security/SEC-Local-Administrators.ps1.meta.json
+!/Data/Scripts/Servers/SRV-Ad-Replication.ps1
+!/Data/Scripts/Servers/SRV-Ad-Replication.ps1.meta.json
+!/Data/Scripts/Servers/SRV-Windows-Errors.ps1
+!/Data/Scripts/Servers/SRV-Windows-Errors.ps1.meta.json
+!/Data/Scripts/Windows/PC-Disk-Space.ps1
+!/Data/Scripts/Windows/PC-Disk-Space.ps1.meta.json
+!/Data/Scripts/Windows/PC-System-Info.ps1
+!/Data/Scripts/Windows/PC-System-Info.ps1.meta.json
+!/Data/Scripts/Windows/PC-Uptime.ps1
+!/Data/Scripts/Windows/PC-Uptime.ps1.meta.json
+!/Data/Scripts/Windows/System-Info.ps1
+!/Data/Scripts/Windows/System-Info.ps1.meta.json
+!/Data/Scripts/Windows/System-Inventory.ps1
+!/Data/Scripts/Windows/System-Inventory.ps1.meta.json

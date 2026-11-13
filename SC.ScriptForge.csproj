@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>SC.ScriptForge</AssemblyName>
+    <RootNamespace>SC.ScriptForge</RootNamespace>
+    <Version>1.6.1</Version>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <ApplicationIcon>Assets\Brand\sc-scriptforge.ico</ApplicationIcon>
+    <Authors>Shmonov Studio</Authors>
+    <Product>SC ScriptForge</Product>
+    <Description>Native Windows inventory and PowerShell workspace</Description>
+    <AvaloniaUseCompiledBindingsByDefault>false</AvaloniaUseCompiledBindingsByDefault>
+    <NoWarn>$(NoWarn);AVLN3001</NoWarn>
+    <PublishTrimmed>false</PublishTrimmed><PublishAot>false</PublishAot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.tools\**;artifacts\**;dist\**;SC.ScriptForge.Core\**;SC.ScriptForge.Windows\**;SC.ScriptForge.Scripting\**;SC.AICore\**;AI\**;Tests\**</DefaultItemExcludes>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="12.1.4" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="12.1.4" />
+    <PackageReference Include="Lucide.Avalonia" Version="0.2.27" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.13" />
+    <ProjectReference Include="SC.ScriptForge.Core\SC.ScriptForge.Core.csproj" />
+    <ProjectReference Include="SC.ScriptForge.Windows\SC.ScriptForge.Windows.csproj" />
+    <ProjectReference Include="SC.ScriptForge.Scripting\SC.ScriptForge.Scripting.csproj" />
+    <ProjectReference Include="SC.AICore\SC.AICore.csproj" />
+    <Compile Include="Desktop\**\*.cs" />
+    <Compile Include="ViewModels\*.cs" />
+    <Compile Include="Services\AiSettingsStore.cs;Services\ScriptAiService.cs;Services\AiIntentRouter.cs" />
+    <Compile Include="Presentation\RunResultPresentation.cs" />
+    <AvaloniaResource Include="Assets\Fonts\**\*.ttf;Assets\Brand\sc-scriptforge.ico;Assets\Brand\sc-scriptforge-mark-preview.png" />
+    <None Update="Assets\Fonts\Manrope\OFL.txt" CopyToPublishDirectory="PreserveNewest" TargetPath="Licenses\Manrope-OFL.txt" />
+    <None Update="Assets\Fonts\Onest\OFL.txt" CopyToPublishDirectory="PreserveNewest" TargetPath="Licenses\Onest-OFL.txt" />
+    <None Update="Assets\Fonts\JetBrainsMono\OFL.txt" CopyToPublishDirectory="PreserveNewest" TargetPath="Licenses\JetBrainsMono-OFL.txt" />
+    <None Update="Assets\Brand\*.svg" CopyToPublishDirectory="PreserveNewest" TargetPath="Brand\%(Filename)%(Extension)" />
+    <None Update="Assets\Licenses\*.txt" CopyToPublishDirectory="PreserveNewest" TargetPath="Licenses\%(Filename)%(Extension)" />
+    <None Update="Samples\*.ps1" CopyToPublishDirectory="PreserveNewest" />
+    <None Update="LICENSE;THIRD-PARTY-NOTICES.md" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="AI\Runtime\**\*" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" TargetPath="AI\Runtime\%(RecursiveDir)%(Filename)%(Extension)" />
+    <None Include="SC.AICore\Licenses\Qwen-Apache-2.0.txt" CopyToPublishDirectory="PreserveNewest" TargetPath="Licenses\Qwen-Apache-2.0.txt" />
+  </ItemGroup>
+  <Target Name="ExcludePublishDebugSymbols" AfterTargets="ComputeFilesToPublish" Condition="'$(Configuration)' == 'Release'">
+    <ItemGroup><ResolvedFileToPublish Remove="@(ResolvedFileToPublish)" Condition="'%(ResolvedFileToPublish.Extension)' == '.pdb'" /></ItemGroup>
+  </Target>
+</Project>

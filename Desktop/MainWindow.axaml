@@ -1,0 +1,72 @@
+<Window xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:icons="using:Lucide.Avalonia" xmlns:local="using:SC.ScriptForge" x:Class="SC.ScriptForge.MainWindow"
+ Title="ScriptForge · Shmonov Studio" Width="1370" Height="990" MinWidth="960" MinHeight="640" WindowStartupLocation="CenterScreen"
+ Icon="avares://SC.ScriptForge/Assets/Brand/sc-scriptforge.ico" WindowDecorations="Full" ExtendClientAreaToDecorationsHint="True" ExtendClientAreaTitleBarHeightHint="54">
+ <Window.Styles>
+  <Style Selector="WindowDrawnDecorations /template/ Panel#PART_TitleTextPanel > TextBlock"><Setter Property="IsVisible" Value="False"/></Style>
+  <Style Selector="WindowDrawnDecorations /template/ Button#PART_FullScreenButton"><Setter Property="IsVisible" Value="False"/></Style>
+ </Window.Styles>
+ <Border Background="{DynamicResource ScSurface}" BorderBrush="{DynamicResource ScBorder}" BorderThickness="1" ClipToBounds="True">
+ <Grid RowDefinitions="54,*" ColumnDefinitions="214,*">
+  <Border Grid.ColumnSpan="2" BorderBrush="{DynamicResource ScLine}" BorderThickness="0,0,0,1" Background="{DynamicResource ScSurface}">
+   <!-- Right margin reserves exactly the caption buttons (3 × 44 + 2 × 2 spacing + 8 edge). -->
+   <Grid x:Name="TitleArea" ColumnDefinitions="*,Auto,*" Margin="20,0,152,0" Background="Transparent" WindowDecorationProperties.ElementRole="TitleBar">
+    <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+     <local:BrandMark Width="30" Height="30" CornerRadius="9" VerticalAlignment="Center"/>
+     <TextBlock Text="ScriptForge" FontFamily="{StaticResource ScHeadingFont}" FontSize="13.5" FontWeight="Bold" LetterSpacing="-0.3" VerticalAlignment="Center"/>
+     <icons:LucideIcon Kind="ChevronRight" Size="14" Classes="glyph" VerticalAlignment="Center"/>
+     <TextBlock x:Name="TitleSection" Text="Дашборд" Classes="soft" FontSize="12.5" VerticalAlignment="Center"/>
+    </StackPanel>
+    <Button x:Name="TitleSearch" Grid.Column="1" Classes="titleSearch" WindowDecorationProperties.ElementRole="User" AutomationProperties.Name="Найти скрипт" ToolTip.Tip="Поиск по библиотеке (Ctrl+K)">
+     <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
+      <icons:LucideIcon Kind="Search" Size="14" Classes="glyph" VerticalAlignment="Center"/>
+      <TextBlock Grid.Column="1" Text="Найти скрипт или задачу…" Classes="muted" FontSize="12" VerticalAlignment="Center"/>
+      <Border Grid.Column="2" Classes="keyHint"><TextBlock Text="Ctrl K" FontSize="10" Classes="muted"/></Border>
+     </Grid>
+    </Button>
+    <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="6" HorizontalAlignment="Right" VerticalAlignment="Center">
+     <Border x:Name="TitleStatus" Classes="titleStatus" VerticalAlignment="Center">
+      <StackPanel Orientation="Horizontal" Spacing="7">
+       <Border x:Name="StatusDot" Background="#2AC5AC" Width="6" Height="6" CornerRadius="3" VerticalAlignment="Center"/>
+       <TextBlock x:Name="StatusText" Text="Локальная библиотека · v1.5.1" Classes="muted" FontSize="11" VerticalAlignment="Center"/>
+      </StackPanel>
+     </Border>
+     <Button x:Name="ThemeButton" Classes="ghost iconAction" WindowDecorationProperties.ElementRole="User" AutomationProperties.Name="Сменить тему">
+      <icons:LucideIcon x:Name="ThemeIcon" Kind="Moon" Size="16" Classes="glyph"/>
+     </Button>
+     <Border Width="1" Height="20" Background="{DynamicResource ScLine}" Margin="4,0,0,0" VerticalAlignment="Center"/>
+    </StackPanel>
+   </Grid>
+  </Border>
+  <Border Grid.Row="1" Background="{DynamicResource ScSidebar}" BorderBrush="{DynamicResource ScLine}" BorderThickness="0,0,1,0">
+   <Grid RowDefinitions="*,Auto,Auto,Auto" Margin="12,22,12,20">
+    <ScrollViewer><StackPanel Spacing="6">
+     <TextBlock Text="РАБОЧАЯ ОБЛАСТЬ" Classes="navLabel" Margin="12,4,0,14"/>
+     <StackPanel x:Name="Navigation" Spacing="5"/>
+     <Border Height="1" Background="{DynamicResource ScLine}" Margin="10,20,10,18"/>
+     <TextBlock Text="ИНСТРУМЕНТЫ" Classes="navLabel" Margin="12,0,0,14"/>
+     <StackPanel x:Name="ToolsNavigation" Spacing="5"/>
+    </StackPanel></ScrollViewer>
+    <Border Grid.Row="1" Background="{DynamicResource ScQuiet}" CornerRadius="11" Padding="14" Margin="10,18,2,26">
+     <StackPanel Spacing="7">
+      <icons:LucideIcon Kind="Download" Size="18" Foreground="{DynamicResource ScAccentText}" HorizontalAlignment="Left" Margin="0,0,0,5"/>
+      <TextBlock Text="Новые инструменты" FontSize="12" FontWeight="SemiBold"/>
+      <TextBlock Text="Ваша библиотека скриптов всегда под рукой." Classes="muted" FontSize="11" TextWrapping="Wrap" LineHeight="17"/>
+      <Button x:Name="SidebarRefresh" Classes="link" Padding="0,4" HorizontalAlignment="Left"><TextBlock Text="Обновить библиотеку →" FontSize="10.5" Foreground="{DynamicResource ScAccentText}"/></Button>
+     </StackPanel>
+    </Border>
+    <StackPanel x:Name="UtilityNavigation" Grid.Row="2" Spacing="4"/>
+    <Grid Grid.Row="3" ColumnDefinitions="35,*" ColumnSpacing="10" Margin="10,28,0,0">
+     <local:BrandMark Width="35" Height="35" CornerRadius="10"/>
+     <StackPanel Grid.Column="1" Spacing="3" VerticalAlignment="Center"><TextBlock Text="ScriptForge" FontFamily="{StaticResource ScHeadingFont}" FontSize="12.5" FontWeight="Bold" LetterSpacing="-0.3"/><TextBlock x:Name="TokenStatus" Text="by Shmonov Studio" Classes="muted" FontSize="10"/></StackPanel>
+    </Grid>
+   </Grid>
+  </Border>
+  <Grid Grid.Column="1" Grid.Row="1" RowDefinitions="Auto,*">
+   <Border x:Name="Notice" IsVisible="False" Background="{DynamicResource ScSelected}" BorderBrush="{DynamicResource ScLine}" BorderThickness="0,0,0,1" Padding="24,10">
+    <Grid ColumnDefinitions="*,Auto"><TextBlock x:Name="NoticeText" TextWrapping="Wrap" VerticalAlignment="Center"/><Button Grid.Column="1" x:Name="NoticeClose" Classes="ghost iconAction" AutomationProperties.Name="Закрыть уведомление"><icons:LucideIcon Kind="X" Size="16" Classes="glyph"/></Button></Grid>
+   </Border>
+   <TransitioningContentControl x:Name="Workspace" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ClipToBounds="True"/>
+  </Grid>
+ </Grid>
+ </Border>
+</Window>

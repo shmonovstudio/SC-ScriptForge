@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000004",
+  "Name": "Незаполненные поля сотрудников AD",
+  "Description": "Находит пользователей без должности, телефона, отдела или руководителя.",
+  "Category": "Active Directory",
+  "Status": "Ready",
+  "Notes": "Только чтение. Нужен ActiveDirectory/RSAT. Список проверяемых атрибутов и область OU задаются в параметрах.",
+  "Tags": [
+    "ad",
+    "attributes",
+    "audit",
+    "сотрудники"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Незаполненные поля сотрудников AD",
+      "Description": "Находит пользователей без должности, телефона, отдела или руководителя.",
+      "Notes": "Только чтение. Нужен ActiveDirectory/RSAT. Список проверяемых атрибутов и область OU задаются в параметрах."
+    },
+    "en": {
+      "Name": "Missing AD employee details",
+      "Description": "Finds users missing a job title, phone number, department or manager.",
+      "Notes": "Read only. Requires ActiveDirectory/RSAT. Configure the attributes and OU search base in the parameters."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

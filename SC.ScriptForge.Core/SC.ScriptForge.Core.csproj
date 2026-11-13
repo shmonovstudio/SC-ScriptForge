@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><TargetFramework>net10.0</TargetFramework><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings><RestorePackagesWithLockFile>true</RestorePackagesWithLockFile></PropertyGroup>
+ <ItemGroup>
+  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.13" />
+  <Compile Include="..\Models\*.cs" Link="Models\%(Filename)%(Extension)" />
+  <Compile Include="..\Infrastructure\ObservableObject.cs" Link="Infrastructure\ObservableObject.cs" />
+  <Compile Include="..\Services\ScriptRepository.cs;..\Services\LibrarySearch.cs;..\Services\LibraryWatcher.cs;..\Services\PreferencesStore.cs;..\Services\RunProfileStore.cs;..\Services\RunHistoryStore.cs;..\Services\DiffService.cs;..\Services\DeletionHistory.cs;..\Services\LibraryLocalization.cs" Link="Services\%(Filename)%(Extension)" />
+
+ </ItemGroup>
+ <Import Project="..\Build\BundledScripts.props" />
+</Project>

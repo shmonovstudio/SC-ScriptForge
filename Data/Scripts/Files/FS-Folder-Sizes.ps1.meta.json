@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000013",
+  "Name": "Размеры подпапок",
+  "Description": "Рассчитывает размеры непосредственных подпапок и сортирует по объёму.",
+  "Category": "Files",
+  "Status": "Ready",
+  "Notes": "Только чтение. Считает вложенные файлы, пропускает точки повторной обработки. Частичные результаты отмечаются предупреждениями; большие каталоги требуют времени.",
+  "Tags": [
+    "files",
+    "folders",
+    "size",
+    "папки"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Размеры подпапок",
+      "Description": "Рассчитывает размеры непосредственных подпапок и сортирует по объёму.",
+      "Notes": "Только чтение. Считает вложенные файлы, пропускает точки повторной обработки. Частичные результаты отмечаются предупреждениями; большие каталоги требуют времени."
+    },
+    "en": {
+      "Name": "Subfolder sizes",
+      "Description": "Measures immediate subfolders and sorts them by size.",
+      "Notes": "Read only. Counts nested files and skips reparse points. Warns about partial results; large folders can take time."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000008",
+  "Name": "Проверка доступности TCP-портов",
+  "Description": "Проверяет указанные TCP-порты сервера с ограничением времени ожидания.",
+  "Category": "Network",
+  "Status": "Ready",
+  "Notes": "Только чтение. Укажите сервер и до 256 портов. Недоступный порт возвращается отдельной строкой; причина ошибки сохраняется в подробностях.",
+  "Tags": [
+    "network",
+    "tcp",
+    "ports",
+    "сеть"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Проверка доступности TCP-портов",
+      "Description": "Проверяет указанные TCP-порты сервера с ограничением времени ожидания.",
+      "Notes": "Только чтение. Укажите сервер и до 256 портов. Недоступный порт возвращается отдельной строкой; причина ошибки сохраняется в подробностях."
+    },
+    "en": {
+      "Name": "TCP port availability",
+      "Description": "Tests selected TCP ports on a server with a connection timeout.",
+      "Notes": "Read only. Specify a server and up to 256 ports. Unavailable ports produce individual rows with error details."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

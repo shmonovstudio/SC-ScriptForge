@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000017",
+  "Name": "Ошибки репликации Active Directory",
+  "Description": "Проверяет текущие ошибки репликации контроллеров домена.",
+  "Category": "Servers",
+  "Status": "Ready",
+  "Notes": "Только чтение. Нужен ActiveDirectory/RSAT и доступ к контроллерам домена. Укажите сервер, сайт, домен или лес и соответствующую область проверки.",
+  "Tags": [
+    "servers",
+    "ad",
+    "replication",
+    "репликация"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Ошибки репликации Active Directory",
+      "Description": "Проверяет текущие ошибки репликации контроллеров домена.",
+      "Notes": "Только чтение. Нужен ActiveDirectory/RSAT и доступ к контроллерам домена. Укажите сервер, сайт, домен или лес и соответствующую область проверки."
+    },
+    "en": {
+      "Name": "Active Directory replication failures",
+      "Description": "Checks current domain controller replication failures.",
+      "Notes": "Read only. Requires ActiveDirectory/RSAT and access to domain controllers. Specify a server, site, domain or forest and the matching scope."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

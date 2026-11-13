@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000002",
+  "Name": "Неактивные учётные записи AD",
+  "Description": "Показывает включённые учётные записи без входа за заданное число дней.",
+  "Category": "Active Directory",
+  "Status": "Ready",
+  "Notes": "Только чтение. Нужен ActiveDirectory/RSAT. Данные о входе приблизительные; новые учётные записи исключаются до истечения выбранного периода.",
+  "Tags": [
+    "ad",
+    "users",
+    "inactive",
+    "аудит"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Неактивные учётные записи AD",
+      "Description": "Показывает включённые учётные записи без входа за заданное число дней.",
+      "Notes": "Только чтение. Нужен ActiveDirectory/RSAT. Данные о входе приблизительные; новые учётные записи исключаются до истечения выбранного периода."
+    },
+    "en": {
+      "Name": "Inactive AD accounts",
+      "Description": "Lists enabled accounts with no sign-in for the specified number of days.",
+      "Notes": "Read only. Requires ActiveDirectory/RSAT. Sign-in timestamps are approximate; new accounts are excluded until the selected period elapses."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

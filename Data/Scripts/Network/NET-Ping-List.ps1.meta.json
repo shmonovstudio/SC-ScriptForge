@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000010",
+  "Name": "Проверка доступности хостов из файла",
+  "Description": "Проверяет ICMP-ответы IP-адресов и хостов из текстового файла.",
+  "Category": "Network",
+  "Status": "Ready",
+  "Notes": "Только чтение. Файл UTF-8, один адрес на строку, до 10000 адресов. Отсутствие ICMP-ответа не доказывает, что компьютер выключен.",
+  "Tags": [
+    "network",
+    "ping",
+    "icmp",
+    "сеть"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Проверка доступности хостов из файла",
+      "Description": "Проверяет ICMP-ответы IP-адресов и хостов из текстового файла.",
+      "Notes": "Только чтение. Файл UTF-8, один адрес на строку, до 10000 адресов. Отсутствие ICMP-ответа не доказывает, что компьютер выключен."
+    },
+    "en": {
+      "Name": "Ping hosts from a file",
+      "Description": "Checks ICMP replies from IP addresses and hosts listed in a text file.",
+      "Notes": "Read only. UTF-8 text file, one target per line, up to 10000 targets. No ICMP reply does not prove that a host is offline."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

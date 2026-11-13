@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000014",
+  "Name": "Неудачные попытки входа в Windows",
+  "Description": "Показывает события 4625: учётную запись, адрес, время и код ошибки входа.",
+  "Category": "Security",
+  "Status": "Ready",
+  "Notes": "Только чтение. Нужны аудит входа и права чтения журнала Security. Для удалённого компьютера нужен доступ к журналам Windows. Лимит событий отмечается предупреждением.",
+  "Tags": [
+    "security",
+    "logon",
+    "audit",
+    "вход"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Неудачные попытки входа в Windows",
+      "Description": "Показывает события 4625: учётную запись, адрес, время и код ошибки входа.",
+      "Notes": "Только чтение. Нужны аудит входа и права чтения журнала Security. Для удалённого компьютера нужен доступ к журналам Windows. Лимит событий отмечается предупреждением."
+    },
+    "en": {
+      "Name": "Failed Windows logons",
+      "Description": "Shows event 4625 details: account, address, time and logon failure codes.",
+      "Notes": "Read only. Requires logon auditing and permission to read the Security log. Remote checks require Windows Event Log access. Warns when the event limit is reached."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

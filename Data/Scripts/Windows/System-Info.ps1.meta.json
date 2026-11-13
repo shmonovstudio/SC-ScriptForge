@@ -1,0 +1,18 @@
+{
+  "Id": "c71bacaa-0322-59c9-8cf9-545e8267dc68",
+  "Name": "Краткая сводка системы",
+  "Description": "Сводка о локальном Windows-компьютере: имя, версия и сборка ОС, время загрузки и объём оперативной памяти.",
+  "Category": "Windows",
+  "Status": "Ready",
+  "Notes": "Только чтение. Использует локальные классы CIM Win32_OperatingSystem и Win32_ComputerSystem. Не изменяет настройки и не удаляет файлы.",
+  "Tags": [
+    "windows",
+    "inventory",
+    "cim",
+    "summary"
+  ],
+  "Translations": {},
+  "Favorite": false,
+  "Created": "2026-10-31T00:00:00",
+  "Updated": "2026-10-31T00:00:00"
+}

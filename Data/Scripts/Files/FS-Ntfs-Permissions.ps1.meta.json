@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000012",
+  "Name": "Права NTFS на папку",
+  "Description": "Показывает владельца папки, разрешения, запреты и наследование прав.",
+  "Category": "Files",
+  "Status": "Ready",
+  "Notes": "Только чтение. Нужен доступ на чтение ACL. Показывает назначенные правила; эффективный доступ с учётом всех групп и SMB не рассчитывается.",
+  "Tags": [
+    "files",
+    "ntfs",
+    "permissions",
+    "права"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Права NTFS на папку",
+      "Description": "Показывает владельца папки, разрешения, запреты и наследование прав.",
+      "Notes": "Только чтение. Нужен доступ на чтение ACL. Показывает назначенные правила; эффективный доступ с учётом всех групп и SMB не рассчитывается."
+    },
+    "en": {
+      "Name": "Folder NTFS permissions",
+      "Description": "Shows the folder owner, allowed and denied permissions, and inheritance.",
+      "Notes": "Read only. Requires permission to read the ACL. Shows assigned rules; does not calculate effective access across groups and SMB permissions."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

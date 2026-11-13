@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000001",
+  "Name": "Проверка ФИО сотрудников в AD",
+  "Description": "Находит пустые поля ФИО, лишние пробелы и подозрительный регистр букв.",
+  "Category": "Active Directory",
+  "Status": "Ready",
+  "Notes": "Только чтение. Нужен ActiveDirectory/RSAT и доступ к домену. Предложения требуют ручной проверки; отчество проверяется отдельным параметром.",
+  "Tags": [
+    "ad",
+    "audit",
+    "names",
+    "фио"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Проверка ФИО сотрудников в AD",
+      "Description": "Находит пустые поля ФИО, лишние пробелы и подозрительный регистр букв.",
+      "Notes": "Только чтение. Нужен ActiveDirectory/RSAT и доступ к домену. Предложения требуют ручной проверки; отчество проверяется отдельным параметром."
+    },
+    "en": {
+      "Name": "Check employee names in AD",
+      "Description": "Finds missing name fields, extra spaces and suspicious letter case.",
+      "Notes": "Read only. Requires ActiveDirectory/RSAT and domain access. Review suggestions manually; checking patronymics is optional."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

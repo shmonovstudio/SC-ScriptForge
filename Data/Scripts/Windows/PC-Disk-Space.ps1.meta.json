@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000006",
+  "Name": "Свободное место на дисках",
+  "Description": "Показывает объём и свободное место на локальных дисках компьютера.",
+  "Category": "Windows",
+  "Status": "Ready",
+  "Notes": "Только чтение. Порог свободного места задаётся в процентах. Для удалённой проверки нужны WinRM/CIM и права доступа.",
+  "Tags": [
+    "windows",
+    "disk",
+    "space",
+    "диски"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Свободное место на дисках",
+      "Description": "Показывает объём и свободное место на локальных дисках компьютера.",
+      "Notes": "Только чтение. Порог свободного места задаётся в процентах. Для удалённой проверки нужны WinRM/CIM и права доступа."
+    },
+    "en": {
+      "Name": "Disk free space",
+      "Description": "Shows capacity and free space on the computer's fixed disks.",
+      "Notes": "Read only. Set the free-space threshold as a percentage. Remote checks require WinRM/CIM access and permissions."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

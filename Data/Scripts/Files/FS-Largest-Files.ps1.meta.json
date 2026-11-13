@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000011",
+  "Name": "Самые большие файлы в папке",
+  "Description": "Находит крупнейшие файлы в выбранной папке и её подпапках.",
+  "Category": "Files",
+  "Status": "Ready",
+  "Notes": "Только чтение. Показывает полный путь, размер и дату изменения. Пропущенные из-за ошибок файлы отмечаются предупреждением.",
+  "Tags": [
+    "files",
+    "size",
+    "search",
+    "файлы"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Самые большие файлы в папке",
+      "Description": "Находит крупнейшие файлы в выбранной папке и её подпапках.",
+      "Notes": "Только чтение. Показывает полный путь, размер и дату изменения. Пропущенные из-за ошибок файлы отмечаются предупреждением."
+    },
+    "en": {
+      "Name": "Largest files in a folder",
+      "Description": "Finds the largest files in a folder and its subfolders.",
+      "Notes": "Read only. Shows full path, size and modification time. Warns when some files cannot be read."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}

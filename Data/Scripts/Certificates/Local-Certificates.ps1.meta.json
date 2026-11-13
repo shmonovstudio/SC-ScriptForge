@@ -1,0 +1,17 @@
+{
+  "Id": "8ff1c651-705b-4f5f-a82a-4d93af013a25",
+  "Name": "Local Certificates",
+  "Description": "Показывает сертификаты в хранилище LocalMachine\\My и сортирует их по сроку окончания.",
+  "Category": "Certificates",
+  "Status": "Ready",
+  "Notes": "Можно развить в мониторинг истекающих сертификатов.",
+  "Tags": [
+    "certificates",
+    "security",
+    "localmachine"
+  ],
+  "Translations": {},
+  "Favorite": false,
+  "Created": "2026-10-20T12:00:00",
+  "Updated": "2026-10-20T17:48:24.4339978+03:00"
+}

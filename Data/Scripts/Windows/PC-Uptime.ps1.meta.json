@@ -1,0 +1,29 @@
+{
+  "Id": "bf274a10-981d-4780-a1a0-000000000007",
+  "Name": "Время работы после загрузки",
+  "Description": "Показывает дату последней загрузки и продолжительность работы компьютера.",
+  "Category": "Windows",
+  "Status": "Ready",
+  "Notes": "Только чтение. Для удалённой проверки нужны WinRM/CIM и права доступа. Быстрый запуск Windows может сохранять прежнее время загрузки ядра.",
+  "Tags": [
+    "windows",
+    "uptime",
+    "boot",
+    "загрузка"
+  ],
+  "Translations": {
+    "ru": {
+      "Name": "Время работы после загрузки",
+      "Description": "Показывает дату последней загрузки и продолжительность работы компьютера.",
+      "Notes": "Только чтение. Для удалённой проверки нужны WinRM/CIM и права доступа. Быстрый запуск Windows может сохранять прежнее время загрузки ядра."
+    },
+    "en": {
+      "Name": "Computer uptime",
+      "Description": "Shows the last boot time and how long the computer has been running.",
+      "Notes": "Read only. Remote checks require WinRM/CIM access and permissions. Windows Fast Startup can preserve the previous kernel boot time."
+    }
+  },
+  "Favorite": false,
+  "Created": "2026-10-25T12:00:00",
+  "Updated": "2026-10-25T12:00:00"
+}
